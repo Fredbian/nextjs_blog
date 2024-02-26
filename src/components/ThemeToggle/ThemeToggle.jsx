@@ -10,8 +10,8 @@ const ThemeToggle = () => {
   const dispatch = useDispatch();
 
   const getCurrentDarkMod = () => {
-    if (typeof window !== undefined) {
-      const currentDarkMod = JSON.parse(localStorage.getItem('isDarkMod'));
+    if (typeof window !== 'undefined') {
+      const currentDarkMod = JSON.parse(window.localStorage.getItem('isDarkMod'));
       return currentDarkMod !== null ? currentDarkMod : false;
     }
     return false;
@@ -19,7 +19,7 @@ const ThemeToggle = () => {
 
   const [isDarkMod, setIsDarkMod] = useState(getCurrentDarkMod())
 
-  const darkMod = useSelector((state) => state.theme.darkMod);
+  const darkMod = useSelector((state) => state.theme.darkMod)
 
   const toggleDarkMod = () => {
     dispatch(themeToggleActions.setDarkTheme());
