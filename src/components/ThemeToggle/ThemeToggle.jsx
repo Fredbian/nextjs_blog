@@ -23,7 +23,7 @@ const ThemeToggle = () => {
 
   const toggleDarkMod = () => {
     dispatch(themeToggleActions.setDarkTheme());
-  };
+  }
   
   useEffect(() => {
     setIsDarkMod(darkMod)
