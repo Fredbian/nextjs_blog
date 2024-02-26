@@ -1,0 +1,50 @@
+.container {
+  width: 40px;
+  height: 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black;
+  position: relative;
+}
+
+.containerDark {
+  width: 40px;
+  height: 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  position: relative;
+}
+
+.ballLight {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: white;
+  position: absolute;
+  left: 1px;
+}
+
+.ballDark {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #0f172a;
+  position: absolute;
+  right: 1px;
+  z-index: 10;
+}
+
+.sun {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  position: absolute;
+  right: 1px;
+}
