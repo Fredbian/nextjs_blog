@@ -9,9 +9,10 @@ import { useEffect, useState } from 'react';
 const ThemeToggle = () => {
   const dispatch = useDispatch();
 
-  const getCurrentDarkMod = () => {
+  const getCurrentDarkMod = async () => {
     if (typeof window !== 'undefined') {
-      const currentDarkMod = JSON.parse(window.localStorage.getItem('isDarkMod'));
+      const currentDarkMod = await JSON.parse(window.localStorage.getItem('isDarkMod'));
+      console.log(currentDarkMod);
       return currentDarkMod !== null ? currentDarkMod : false;
     }
     return false;
@@ -30,13 +31,21 @@ const ThemeToggle = () => {
   }, [darkMod])
 
   useEffect(() => {
-    const currentDarkMod = getCurrentDarkMod()
-    console.log(currentDarkMod);
-
-    if (currentDarkMod !== null) {
-      dispatch(themeToggleActions.setThemeWhenReload(currentDarkMod))
-      setIsDarkMod(currentDarkMod)
+    const fetchCurrentDarkmod = async () => {
+      try {
+        const currentDarkMod = await getCurrentDarkMod()
+        console.log(currentDarkMod);
+    
+        if (currentDarkMod !== null) {
+          dispatch(themeToggleActions.setThemeWhenReload(currentDarkMod))
+          setIsDarkMod(currentDarkMod)
+        }
+      } catch (error) {
+        console.error('Error')
+      }
     }
+
+    fetchCurrentDarkmod()
   }, [])
 
   return (
