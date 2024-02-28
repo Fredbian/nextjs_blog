@@ -9,7 +9,7 @@ const LoginPage = () => {
   const { data, status } = useSession();
   const router = useRouter()
 
-  // console.log(data, status);
+  console.log(data, status);
   if (status === 'loading') {
     return <div className={styles.loading}>Loading...</div>;
   }

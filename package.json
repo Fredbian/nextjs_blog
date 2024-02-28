@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@auth/prisma-adapter": "^1.4.0",
+    "@prisma/client": "^5.10.2",
     "@reduxjs/toolkit": "^2.2.1",
     "eslint": "8.48.0",
     "eslint-config-next": "13.4.19",
@@ -21,5 +23,8 @@
     "redux": "^5.0.1",
     "redux-persist": "^6.0.0",
     "redux-thunk": "^3.1.0"
+  },
+  "devDependencies": {
+    "prisma": "^5.10.2"
   }
 }
