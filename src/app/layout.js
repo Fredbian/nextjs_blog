@@ -4,6 +4,7 @@ import Footer from "@/components/Footer/Footer";
 import Navbar from "@/components/Navbar/Navbar";
 import { Providers } from '@/GlobalRedux/provider';
 import ThemeProvider from '@/providers/ThemeProvider';
+import AuthProvider from '@/providers/AuthProvider';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,15 +18,17 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <Providers>
-          <ThemeProvider>
-          <div className='container'>
-            <div className='wrapper'>
-              <Navbar />
-              {children}
-              <Footer />
-            </div>
-          </div>
-          </ThemeProvider>
+          <AuthProvider>
+            <ThemeProvider>
+              <div className='container'>
+                <div className='wrapper'>
+                  <Navbar />
+                  {children}
+                  <Footer />
+                </div>
+              </div>
+            </ThemeProvider>
+          </AuthProvider>
         </Providers>
       </body>
     </html>

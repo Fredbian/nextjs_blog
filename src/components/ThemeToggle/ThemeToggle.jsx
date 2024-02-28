@@ -12,7 +12,7 @@ const ThemeToggle = () => {
   const getCurrentDarkMod = async () => {
     if (typeof window !== 'undefined') {
       const currentDarkMod = await JSON.parse(window.localStorage.getItem('isDarkMod'));
-      console.log(currentDarkMod);
+      // console.log(currentDarkMod);
       return currentDarkMod !== null ? currentDarkMod : false;
     }
     return false;
@@ -34,7 +34,7 @@ const ThemeToggle = () => {
     const fetchCurrentDarkmod = async () => {
       try {
         const currentDarkMod = await getCurrentDarkMod()
-        console.log(currentDarkMod);
+        // console.log(currentDarkMod);
     
         if (currentDarkMod !== null) {
           dispatch(themeToggleActions.setThemeWhenReload(currentDarkMod))
