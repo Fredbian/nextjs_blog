@@ -12,7 +12,12 @@
   cursor: pointer;
 }
 
-.button:disabled{
+.button:disabled {
   background-color: rgba(220, 20, 60, 0.473);
+  cursor: not-allowed;
+}
+
+.button:disabled {
+  background-color: rgba(220, 20, 60, 0.308);
   cursor: not-allowed;
 }
