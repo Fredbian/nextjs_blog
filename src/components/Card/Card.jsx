@@ -4,9 +4,11 @@ import styles from './card.module.css';
 import Link from 'next/link';
 
 const Card = ({ key, item }) => {
+  console.log(item.img);
+
   return (
     <div className={styles.container} key={key}>
-      {item.img && (
+      {item?.img && (
         <div className={styles.imageContainer}>
           <Image src={item.img} alt="" fill className={styles.image} />
         </div>
