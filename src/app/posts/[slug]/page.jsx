@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Comments from '@/components/comments/Comments';
 
 const getData = async (slug) => {
-  const res = await fetch(`http://localhost:3000/api/post/${slug}`, {
+  const res = await fetch(`http://localhost:3000/api/posts/${slug}`, {
     cache: 'no-store',
   });
 
@@ -50,7 +50,7 @@ const SinglePage = async ({ params }) => {
             dangerouslySetInnerHTML={{ __html: data?.description }}
           />
           <div className={styles.comment}>
-            <Comments />
+            <Comments postSlug={slug} />
           </div>
         </div>
         <Menu />

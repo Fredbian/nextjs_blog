@@ -19,7 +19,7 @@ const getData = async (page, cat) => {
 const CardList = async ({ page, cat }) => {
   const { posts, count } = await getData(page, cat);
 
-  console.log(posts);
+  // console.log(posts);
 
   const POST_PER_PAGE = 2;
 
