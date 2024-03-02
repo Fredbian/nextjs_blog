@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 import 'react-quill/dist/quill.bubble.css';
 import { useRouter } from 'next/navigation';
 import { useSession } from 'next-auth/react';
+import dynamic from 'next/dynamic';
 import {
   getStorage,
   ref,
