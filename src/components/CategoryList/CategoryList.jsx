@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 // function to fetch data
 const getData = async () => {
-  const res = await fetch('http://localhost:3000/api/categories', {
+  const res = await fetch('https://nextjs-blog-9gscbt7uc-fredbians-projects.vercel.app/api/categories', {
     cache: 'no-store',
   });
 

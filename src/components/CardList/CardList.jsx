@@ -5,7 +5,7 @@ import Card from '../Card/Card';
 
 // function to fetch data
 const getData = async (page, cat) => {
-  const res = await fetch(`http://localhost:3000/api/posts?page=${page}&cat=${cat || ''}`, {
+  const res = await fetch(`https://nextjs-blog-9gscbt7uc-fredbians-projects.vercel.app/api/posts?page=${page}&cat=${cat || ''}`, {
     cache: 'no-store',
   });
 
