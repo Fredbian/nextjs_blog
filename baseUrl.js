@@ -1,4 +1,4 @@
-const baseUrl = 'http://localhost:3000'
+const baseUrl = 'https://nextjs-blog-zeta-eight-80.vercel.app/'
 
 
 export default baseUrl
