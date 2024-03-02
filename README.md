@@ -24,3 +24,7 @@ Change baseUrl to [http://localhost:3000]
 ## Deployed Url
 
 https://nextjs-blog-zeta-eight-80.vercel.app/
+
+## Screenshot
+![Screenshot](https://github.com/Fredbian/nextjs_blog/blob/main/public/screen1.png)
+![Screenshot](https://github.com/Fredbian/nextjs_blog/blob/main/public/screen2.png)
