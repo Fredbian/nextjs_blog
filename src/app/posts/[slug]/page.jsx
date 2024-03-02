@@ -2,9 +2,10 @@ import Menu from '@/components/Menu/Menu';
 import styles from './post.module.css';
 import Image from 'next/image';
 import Comments from '@/components/Comments/Comments';
+import baseUrl from '../../../../baseUrl';
 
 const getData = async (slug) => {
-  const res = await fetch(`https://nextjs-blog-9gscbt7uc-fredbians-projects.vercel.app/api/posts/${slug}`, {
+  const res = await fetch(`${baseUrl}/api/posts/${slug}`, {
     cache: 'no-store',
   });
 

@@ -2,10 +2,11 @@ import React from 'react';
 import styles from './categoryList.module.css';
 import Link from 'next/link';
 import Image from 'next/image';
+import baseUrl from '../../../baseUrl';
 
 // function to fetch data
 const getData = async () => {
-  const res = await fetch('https://nextjs-blog-9gscbt7uc-fredbians-projects.vercel.app/api/categories', {
+  const res = await fetch(`${baseUrl}/api/categories`, {
     cache: 'no-store',
   });
 

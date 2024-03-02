@@ -2,10 +2,11 @@ import React from 'react';
 import styles from './cardList.module.css';
 import Pagination from '../Pagination/Pagination';
 import Card from '../Card/Card';
+import baseUrl from '../../../baseUrl';
 
 // function to fetch data
 const getData = async (page, cat) => {
-  const res = await fetch(`https://nextjs-blog-9gscbt7uc-fredbians-projects.vercel.app/api/posts?page=${page}&cat=${cat || ''}`, {
+  const res = await fetch(`${baseUrl}/api/posts?page=${page}&cat=${cat || ''}`, {
     cache: 'no-store',
   });
 
