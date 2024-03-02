@@ -18,7 +18,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 To run locally:
 
-Change baseUrl to [http://localhost:3000]
+Change baseUrl to ```http://localhost:3000```
 
 
 ## Deployed Url
